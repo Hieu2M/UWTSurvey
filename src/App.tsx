@@ -96,9 +96,10 @@ function App() {
                 alt="UWT Campus" 
                 className="rounded-xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-purple-600 text-white p-4 rounded-lg">
-                <p className="font-semibold">Join us in shaping the future of UWT</p>
+              <div className="absolute -top-6 -right-6 bg-purple-600 text-white p-4 rounded-lg">
+                <a href="#feedback" className="hover:text-purple-300 transition">Join us in shaping the future of UWT</a>
               </div>
+              
             </div>
           </div>
         </div>
