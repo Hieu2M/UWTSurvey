@@ -8,7 +8,7 @@ import ProjectFeature from './components/ProjectFeature';
 const teamMembers = [
   {
     name: "Hieu Nguyen",
-    role: "UWT Senior Urban Design",
+    role: "Urban Design/GIS Certificate",
     description: "Advocating for diversity, equity and inclusion",
     imageUrl: "/images/AnhThe.png"
   },
@@ -20,6 +20,42 @@ const teamMembers = [
   },
   {
     name: "Sabien Adderley",
+    role: "UWT Senior Urban Design",
+    description: "",
+    imageUrl: ""
+  },
+  {
+    name: "Yasir Al Sammarraie",
+    role: "UWT Senior Urban Design",
+    description: "",
+    imageUrl: ""
+  },
+  {
+    name: "Hugo Julian Ennis",
+    role: "UWT Senior Urban Design",
+    description: "",
+    imageUrl: ""
+  },
+  {
+    name: "Christy Gonzalez",
+    role: "UWT Senior Urban Design",
+    description: "",
+    imageUrl: ""
+  },
+  {
+    name: "Asad Hussein",
+    role: "UWT Senior Urban Design",
+    description: "",
+    imageUrl: ""
+  },
+  {
+    name: "Tu T Nguyen",
+    role: "UWT Senior Urban Design",
+    description: "",
+    imageUrl: ""
+  },
+  {
+    name: "Benjamin Smith",
     role: "UWT Senior Urban Design",
     description: "",
     imageUrl: ""
@@ -66,7 +102,7 @@ function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {teamMembers.map((member, index) => (
               <TeamMember key={index} {...member} />
             ))}

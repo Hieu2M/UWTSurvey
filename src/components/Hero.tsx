@@ -12,22 +12,14 @@ export default function Hero() {
 
   return (
     <div className="relative h-screen">
-      {/* Spline Animation Background */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
-          <Suspense fallback={<div className="w-full h-full bg-gradient-to-br from-purple-900 to-purple-700" />}>
-            {!splineError ? (
-              <Spline 
-                className="w-full h-full"
-                scene="https://my.spline.design/3dpathsfactoryletterscopy-ba47fef584c8a20217de3f518234c759"
-                onError={handleSplineError}
-              />
-            ) : (
-              <div className="w-full h-full bg-gradient-to-br from-purple-900 to-purple-700 animate-gradient" />
-            )}
-          </Suspense>
-        </div>
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+      {/* Hero Background Image */}
+      <div className="absolute inset-0 w-full h-full">
+        <img 
+          src="/images/UWTCrowd.jpg" 
+          alt="UW Tacoma Campus" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 backdrop-blur-[1px]" />
       </div>
 
       <div className="relative z-10 h-full">
