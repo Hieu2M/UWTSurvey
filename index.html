@@ -1,13 +1,25 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UW Tacoma Redesign Survey</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UWT Urban Design</title>
+  <script type="text/javascript">
+    // Handle direct navigation to routes in production
+    (function() {
+      const path = window.location.pathname;
+      const html = path.includes('.') ? path : '/index.html';
+      const route = path.includes('.') ? '/' : path;
+
+      if (path !== '/' && !path.includes('.')) {
+        window.localStorage.setItem('path', route);
+      }
+    })();
+  </script>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
