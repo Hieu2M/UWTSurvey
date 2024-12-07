@@ -1,59 +1,5 @@
 <!doctype html>
 <html lang="en">
-<<<<<<< HEAD
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>UWT Urban Design</title>
-  <script type="text/javascript">
-    // Enhanced routing handler for both desktop and mobile
-    (function() {
-      const path = window.location.pathname;
-      const search = window.location.search;
-      const hash = window.location.hash;
-
-      // Combine full URL parts
-      const fullPath = path + search + hash;
-
-      // Store the full path if it's not the root and not a static asset
-      if (path !== '/' && !path.includes('.')) {
-        window.localStorage.setItem('path', fullPath);
-        window.localStorage.setItem('lastVisit', Date.now().toString());
-      }
-
-<<<<<<< HEAD
-      // Handle hash changes
-      window.addEventListener('hashchange', function() {
-        const element = document.querySelector(window.location.hash);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-
-      // Handle initial load
-      handleRouting();
-
-      // Handle navigation events
-      window.addEventListener('popstate', handleRouting);
-      window.addEventListener('pushstate', handleRouting);
-      window.addEventListener('replacestate', handleRouting);
-=======
-      // Handle mobile back/forward navigation
-      window.addEventListener('popstate', function() {
-        const currentPath = window.location.pathname + window.location.search + window.location.hash;
-        window.localStorage.setItem('path', currentPath);
-      });
->>>>>>> parent of 9a337b3 (update refresh function 3)
-    })();
-  </script>
-</head>
-<body>
-<div id="root"></div>
-<script type="module" src="/src/main.tsx"></script>
-</body>
-</html>
-=======
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -65,4 +11,3 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
->>>>>>> parent of 4b31a6f (update refresh function)
