@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
+<<<<<<< HEAD
 // Handle route and hash restoration
 try {
     const lastPath = window.sessionStorage.getItem('lastPath');
@@ -18,8 +19,10 @@ try {
     console.warn('Failed to restore path:', e);
 }
 
+=======
+>>>>>>> parent of 4b31a6f (update refresh function)
 createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <App />
-    </StrictMode>
+  <StrictMode>
+    <App />
+  </StrictMode>
 );

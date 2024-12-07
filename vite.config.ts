@@ -6,6 +6,7 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+<<<<<<< HEAD
   server: {
     historyApiFallback: true,
   },
@@ -23,3 +24,6 @@ export default defineConfig({
     },
   },
 });
+=======
+});
+>>>>>>> parent of 4b31a6f (update refresh function)
