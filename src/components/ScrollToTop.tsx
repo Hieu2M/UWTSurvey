@@ -2,22 +2,24 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export default function ScrollToTop() {
-    const { pathname, search, hash } = useLocation();
+    const { pathname } = useLocation();
 
     useEffect(() => {
-        // Store current route on navigation
-        const fullPath = pathname + search + hash;
-        if (pathname !== '/') {
-            window.localStorage.setItem('path', fullPath);
-            // window.localStorage.setItem('lastVisit', Date.now().toString());
-        }
-
-        // Smooth scroll to top
+        // Smooth scroll to top on route change
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    }, [pathname, search, hash]);
+
+        // Store current path in sessionStorage
+        if (pathname !== '/') {
+            try {
+                window.sessionStorage.setItem('lastPath', pathname);
+            } catch (e) {
+                console.warn('Failed to store path:', e);
+            }
+        }
+    }, [pathname]);
 
     return null;
 }

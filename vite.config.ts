@@ -8,7 +8,19 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   server: {
-    // Handle client-side routing
     historyApiFallback: true,
+  },
+  preview: {
+    port: 5173,
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'three-vendor': ['three', '@react-three/fiber', '@react-three/drei'],
+        },
+      },
+    },
   },
 });

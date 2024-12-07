@@ -6,26 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>UWT Urban Design</title>
   <script type="text/javascript">
-    // Enhanced routing handler for both desktop and mobile
     (function() {
-      const path = window.location.pathname;
-      const search = window.location.search;
-      const hash = window.location.hash;
+      // Only run this script once
+      if (window.routingInitialized) return;
+      window.routingInitialized = true;
 
-      // Combine full URL parts
-      const fullPath = path + search + hash;
+      function handleRouting() {
+        const path = window.location.pathname;
+        const search = window.location.search;
+        const hash = window.location.hash;
+        const fullPath = path + search + hash;
 
-      // Store the full path if it's not the root and not a static asset
-      if (path !== '/' && !path.includes('.')) {
-        window.localStorage.setItem('path', fullPath);
-        window.localStorage.setItem('lastVisit', Date.now().toString());
+        // Don't store path for static assets or home page
+        if (path !== '/' && !path.includes('.')) {
+          try {
+            window.sessionStorage.setItem('lastPath', fullPath);
+          } catch (e) {
+            console.warn('Failed to store path in sessionStorage:', e);
+          }
+        }
       }
 
-      // Handle mobile back/forward navigation
-      window.addEventListener('popstate', function() {
-        const currentPath = window.location.pathname + window.location.search + window.location.hash;
-        window.localStorage.setItem('path', currentPath);
-      });
+      // Handle initial load
+      handleRouting();
+
+      // Handle navigation events
+      window.addEventListener('popstate', handleRouting);
+      window.addEventListener('pushstate', handleRouting);
+      window.addEventListener('replacestate', handleRouting);
     })();
   </script>
 </head>
