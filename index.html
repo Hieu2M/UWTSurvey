@@ -27,6 +27,14 @@
         }
       }
 
+      // Handle hash changes
+      window.addEventListener('hashchange', function() {
+        const element = document.querySelector(window.location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
       // Handle initial load
       handleRouting();
 

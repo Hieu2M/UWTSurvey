@@ -2,24 +2,34 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export default function ScrollToTop() {
-    const { pathname } = useLocation();
+    const { pathname, hash } = useLocation();
 
     useEffect(() => {
-        // Smooth scroll to top on route change
+        // Handle hash navigation
+        if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+        }
+
+        // Default scroll to top
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
 
-        // Store current path in sessionStorage
-        if (pathname !== '/') {
-            try {
-                window.sessionStorage.setItem('lastPath', pathname);
-            } catch (e) {
-                console.warn('Failed to store path:', e);
+        // Store current path including hash in sessionStorage
+        try {
+            const fullPath = pathname + (hash || '');
+            if (pathname !== '/') {
+                window.sessionStorage.setItem('lastPath', fullPath);
             }
+        } catch (e) {
+            console.warn('Failed to store path:', e);
         }
-    }, [pathname]);
+    }, [pathname, hash]);
 
     return null;
 }
