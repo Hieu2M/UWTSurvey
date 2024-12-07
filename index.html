@@ -3,18 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>UWT Urban Design</title>
   <script type="text/javascript">
-    // Handle direct navigation to routes in production
+    // Enhanced routing handler for both desktop and mobile
     (function() {
       const path = window.location.pathname;
-      const html = path.includes('.') ? path : '/index.html';
-      const route = path.includes('.') ? '/' : path;
+      const search = window.location.search;
+      const hash = window.location.hash;
 
+      // Combine full URL parts
+      const fullPath = path + search + hash;
+
+      // Store the full path if it's not the root and not a static asset
       if (path !== '/' && !path.includes('.')) {
-        window.localStorage.setItem('path', route);
+        window.localStorage.setItem('path', fullPath);
+        window.localStorage.setItem('lastVisit', Date.now().toString());
       }
+
+      // Handle mobile back/forward navigation
+      window.addEventListener('popstate', function() {
+        const currentPath = window.location.pathname + window.location.search + window.location.hash;
+        window.localStorage.setItem('path', currentPath);
+      });
     })();
   </script>
 </head>
