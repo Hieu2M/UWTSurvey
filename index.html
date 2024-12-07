@@ -7,27 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>UWT Urban Design</title>
   <script type="text/javascript">
+    // Enhanced routing handler for both desktop and mobile
     (function() {
-      // Only run this script once
-      if (window.routingInitialized) return;
-      window.routingInitialized = true;
+      const path = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
 
-      function handleRouting() {
-        const path = window.location.pathname;
-        const search = window.location.search;
-        const hash = window.location.hash;
-        const fullPath = path + search + hash;
+      // Combine full URL parts
+      const fullPath = path + search + hash;
 
-        // Don't store path for static assets or home page
-        if (path !== '/' && !path.includes('.')) {
-          try {
-            window.sessionStorage.setItem('lastPath', fullPath);
-          } catch (e) {
-            console.warn('Failed to store path in sessionStorage:', e);
-          }
-        }
+      // Store the full path if it's not the root and not a static asset
+      if (path !== '/' && !path.includes('.')) {
+        window.localStorage.setItem('path', fullPath);
+        window.localStorage.setItem('lastVisit', Date.now().toString());
       }
 
+<<<<<<< HEAD
       // Handle hash changes
       window.addEventListener('hashchange', function() {
         const element = document.querySelector(window.location.hash);
@@ -43,6 +38,13 @@
       window.addEventListener('popstate', handleRouting);
       window.addEventListener('pushstate', handleRouting);
       window.addEventListener('replacestate', handleRouting);
+=======
+      // Handle mobile back/forward navigation
+      window.addEventListener('popstate', function() {
+        const currentPath = window.location.pathname + window.location.search + window.location.hash;
+        window.localStorage.setItem('path', currentPath);
+      });
+>>>>>>> parent of 9a337b3 (update refresh function 3)
     })();
   </script>
 </head>

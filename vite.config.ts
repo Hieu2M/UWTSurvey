@@ -8,8 +8,10 @@ export default defineConfig({
   },
 <<<<<<< HEAD
   server: {
+    // Handle client-side routing
     historyApiFallback: true,
   },
+<<<<<<< HEAD
   preview: {
     port: 5173,
   },
@@ -27,3 +29,6 @@ export default defineConfig({
 =======
 });
 >>>>>>> parent of 4b31a6f (update refresh function)
+=======
+});
+>>>>>>> parent of 9a337b3 (update refresh function 3)
