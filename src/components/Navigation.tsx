@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { School, ChevronDown, Menu, X } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
+import { scrollToTop } from './ScrollToTop';
 
 export default function Navigation() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileProjectsOpen, setIsMobileProjectsOpen] = useState(false);
+
+  const handleNavClick = () => {
+    scrollToTop();
+    closeMobileMenu();
+  };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
@@ -16,7 +22,7 @@ export default function Navigation() {
       <nav className="sticky top-0 z-50 bg-purple-700 shadow-lg">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <NavLink to="/" className="flex items-center space-x-2" onClick={closeMobileMenu}>
+            <NavLink to="/" className="flex items-center space-x-2" onClick={handleNavClick}>
               <School className="h-8 w-8 text-white" />
               <span className="text-white font-bold text-xl">UWT Urban Design</span>
             </NavLink>
@@ -40,6 +46,7 @@ export default function Navigation() {
                   className={({ isActive }) =>
                       `text-white transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`
                   }
+                  onClick={handleNavClick}
               >
                 Home
               </NavLink>
@@ -63,6 +70,7 @@ export default function Navigation() {
                             className={({ isActive }) =>
                                 `block px-4 py-2 text-gray-800 hover:bg-purple-50 transition-colors ${isActive ? 'bg-purple-100' : ''}`
                             }
+                            onClick={handleNavClick}
                         >
                           Food Analysis
                         </NavLink>
@@ -71,6 +79,7 @@ export default function Navigation() {
                             className={({ isActive }) =>
                                 `block px-4 py-2 text-gray-800 hover:bg-purple-50 transition-colors ${isActive ? 'bg-purple-100' : ''}`
                             }
+                            onClick={handleNavClick}
                         >
                           Transportation Analysis
                         </NavLink>
@@ -79,6 +88,7 @@ export default function Navigation() {
                             className={({ isActive }) =>
                                 `block px-4 py-2 text-gray-800 hover:bg-purple-50 transition-colors ${isActive ? 'bg-purple-100' : ''}`
                             }
+                            onClick={handleNavClick}
                         >
                           Community Connection Analysis
                         </NavLink>
@@ -91,6 +101,7 @@ export default function Navigation() {
                   className={({ isActive }) =>
                       `text-white transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`
                   }
+                  onClick={handleNavClick}
               >
                 Events
               </NavLink>
@@ -99,6 +110,7 @@ export default function Navigation() {
                   className={({ isActive }) =>
                       `text-white transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`
                   }
+                  onClick={handleNavClick}
               >
                 About
               </NavLink>
@@ -107,6 +119,7 @@ export default function Navigation() {
                   className={({ isActive }) =>
                       `text-white transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`
                   }
+                  onClick={handleNavClick}
               >
                 Contact
               </NavLink>
@@ -122,7 +135,7 @@ export default function Navigation() {
                       className={({ isActive }) =>
                           `text-white py-2 transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`
                       }
-                      onClick={closeMobileMenu}
+                      onClick={handleNavClick}
                   >
                     Home
                   </NavLink>
@@ -141,7 +154,7 @@ export default function Navigation() {
                               className={({ isActive }) =>
                                   `block py-2 text-white hover:text-purple-200 transition-colors ${isActive ? 'text-purple-200 font-semibold' : ''}`
                               }
-                              onClick={closeMobileMenu}
+                              onClick={handleNavClick}
                           >
                             Food Analysis
                           </NavLink>
@@ -150,7 +163,7 @@ export default function Navigation() {
                               className={({ isActive }) =>
                                   `block py-2 text-white hover:text-purple-200 transition-colors ${isActive ? 'text-purple-200 font-semibold' : ''}`
                               }
-                              onClick={closeMobileMenu}
+                              onClick={handleNavClick}
                           >
                             Transportation Analysis
                           </NavLink>
@@ -159,7 +172,7 @@ export default function Navigation() {
                               className={({ isActive }) =>
                                   `block py-2 text-white hover:text-purple-200 transition-colors ${isActive ? 'text-purple-200 font-semibold' : ''}`
                               }
-                              onClick={closeMobileMenu}
+                              onClick={handleNavClick}
                           >
                             Community Connection Analysis
                           </NavLink>
@@ -171,7 +184,7 @@ export default function Navigation() {
                       className={({ isActive }) =>
                           `text-white py-2 transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`
                       }
-                      onClick={closeMobileMenu}
+                      onClick={handleNavClick}
                   >
                     Events
                   </NavLink>
@@ -180,7 +193,7 @@ export default function Navigation() {
                       className={({ isActive }) =>
                           `text-white py-2 transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`
                       }
-                      onClick={closeMobileMenu}
+                      onClick={handleNavClick}
                   >
                     About
                   </NavLink>
@@ -189,7 +202,7 @@ export default function Navigation() {
                       className={({ isActive }) =>
                           `text-white py-2 transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`
                       }
-                      onClick={closeMobileMenu}
+                      onClick={handleNavClick}
                   >
                     Contact
                   </NavLink>
