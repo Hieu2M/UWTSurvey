@@ -10,6 +10,7 @@ import EventsPage from './pages/EventsPage';
 import FoodAnalysis from './pages/projects/FoodAnalysis';
 import TransportationAnalysis from './pages/projects/TransportationAnalysis';
 import CommunityAnalysis from './pages/projects/CommunityAnalysis';
+import FloatingSurveyButton from "./components/FloatingSurveyButton.tsx";
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                     </Routes>
                 </main>
                 <Footer />
+                <FloatingSurveyButton/>
             </div>
         </Router>
     );

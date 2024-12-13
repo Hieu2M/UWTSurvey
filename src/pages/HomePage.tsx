@@ -3,6 +3,8 @@ import { Users, MapPin, Building, Users2 } from 'lucide-react';
 import Hero from "../components/Hero.tsx";
 import TeamMember from "../components/TeamMember.tsx";
 import ProjectFeature from "../components/ProjectFeature.tsx";
+import ManifestoSection from "../components/manifesto/ManifestoSection.tsx";
+import About from "../components/About.tsx";
 
 
 const teamMembers = [
@@ -10,7 +12,7 @@ const teamMembers = [
         name: "Hieu Nguyen",
         role: "Urban Design/GIS Certificate",
         description: "Advocating for diversity, equity and inclusion",
-        imageUrl: "/images/AnhThe.png"
+        imageUrl: "/images/HieuAnalysis.png"
     },
     {
         name: "Raisa Baker",
@@ -40,7 +42,7 @@ const teamMembers = [
         name: "Christy Gonzalez",
         role: "UWT Senior Urban Design",
         description: "",
-        imageUrl: ""
+        imageUrl: "/images/ChristyAnalysis.jpg"
     },
     {
         name: "Asad Hussein",
@@ -89,25 +91,7 @@ export default function HomePage() {
     return (
         <>
             <Hero/>
-
-            {/* Team Section */}
-            <section id="team" className="py-20 bg-gray-50">
-                <div className="container mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            We're passionate urban design seniors committed to creating inclusive and vibrant spaces
-                            that enhance the UWT experience for everyone.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-                        {teamMembers.map((member, index) => (
-                            <TeamMember key={index} {...member} />
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <ManifestoSection/>
 
             {/* Project Overview Section */}
             <section id="project" className="py-20">
@@ -116,7 +100,7 @@ export default function HomePage() {
                         <div>
                             <h2 className="text-4xl font-bold text-gray-900 mb-6">Redesigning UWT's Future</h2>
                             <p className="text-xl text-gray-600 mb-8">
-                                Our capstone project focuses on redesigning the master plan that enhances the campus
+                                Our capstone project collaborating with <b>Civil Engineering 2025 Cohort</b> focuses on redesigning the master plan that enhances the campus
                                 experience while preserving UWT's unique character and connection to Tacoma.
                             </p>
                             <div className="space-y-6">
@@ -141,6 +125,26 @@ export default function HomePage() {
                 </div>
             </section>
 
+            <About/>
+            {/* Team Section */}
+            <section id="team" className="py-20 bg-gray-50">
+                <div className="container mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Performed GIS analysis</h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                            There are nine of us in this cohort, and we conducted analyses on various topics related to the University of Washington Tacoma campus,
+                            with each team member responsible for a specific area. Below is a graphic summary of each:
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+                        {teamMembers.map((member, index) => (
+                            <TeamMember key={index} {...member} />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Feedback Section */}
             <section id="feedback" className="py-20 bg-purple-50">
                 <div className="container mx-auto px-6">
@@ -151,7 +155,7 @@ export default function HomePage() {
                             Share your thoughts to help shape UWT's future.
                         </p>
                         <a
-                            href="https://forms.gle/UgqV66KyFrhX282X8"
+                            href="https://survey123.arcgis.com/share/53ea8282b80d41faaa2b3eaeed822fd9"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-block px-8 py-4 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition transform hover:scale-105"

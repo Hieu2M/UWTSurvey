@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { School, ChevronDown, Menu, X } from 'lucide-react';
+import { CloudSun, ChevronDown, Menu, X } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import { scrollToTop } from './ScrollToTop';
 
@@ -23,8 +23,8 @@ export default function Navigation() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <NavLink to="/" className="flex items-center space-x-2" onClick={handleNavClick}>
-              <School className="h-8 w-8 text-white" />
-              <span className="text-white font-bold text-xl">UWT Urban Design</span>
+              <CloudSun className="h-8 w-8 text-white" />
+              <span className="text-white font-bold text-xl">UWT Urban Design 2025 Capstone</span>
             </NavLink>
 
             {/* Mobile Menu Button */}
@@ -105,15 +105,15 @@ export default function Navigation() {
               >
                 Events
               </NavLink>
-              <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                      `text-white transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`
-                  }
-                  onClick={handleNavClick}
-              >
-                About
-              </NavLink>
+              {/*<NavLink*/}
+              {/*    to="/about"*/}
+              {/*    className={({ isActive }) =>*/}
+              {/*        `text-white transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`*/}
+              {/*    }*/}
+              {/*    onClick={handleNavClick}*/}
+              {/*>*/}
+              {/*  About*/}
+              {/*</NavLink>*/}
               <NavLink
                   to="/contact"
                   className={({ isActive }) =>
@@ -188,15 +188,15 @@ export default function Navigation() {
                   >
                     Events
                   </NavLink>
-                  <NavLink
-                      to="/about"
-                      className={({ isActive }) =>
-                          `text-white py-2 transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`
-                      }
-                      onClick={handleNavClick}
-                  >
-                    About
-                  </NavLink>
+                  {/*<NavLink*/}
+                  {/*    to="/about"*/}
+                  {/*    className={({ isActive }) =>*/}
+                  {/*        `text-white py-2 transition-colors ${isActive ? 'text-purple-200 font-semibold' : 'hover:text-purple-200'}`*/}
+                  {/*    }*/}
+                  {/*    onClick={handleNavClick}*/}
+                  {/*>*/}
+                  {/*  About*/}
+                  {/*</NavLink>*/}
                   <NavLink
                       to="/contact"
                       className={({ isActive }) =>

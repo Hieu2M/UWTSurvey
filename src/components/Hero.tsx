@@ -36,12 +36,12 @@ export default function Hero() {
                 Reimagining UW Tacoma's Future Together
               </h1>
               <p className="text-xl text-gray-200 mb-8 animate-fade-in-delay">
-                We're a team of senior Urban Design students working to create a new master plan
+                We're a team of senior Urban Design students will collaborate with <b>Civil Engineering 2025 Cohort</b> working to create a new master plan
                 that reflects your campus experience. Your voice matters in shaping UWT's future.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-2">
                 <a
-                    href="https://forms.gle/UgqV66KyFrhX282X8"
+                    href="https://survey123.arcgis.com/share/53ea8282b80d41faaa2b3eaeed822fd9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-8 py-4 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition flex items-center justify-center group"
