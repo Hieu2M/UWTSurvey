@@ -50,52 +50,52 @@ export default function Navigation() {
               >
                 Home
               </NavLink>
-              <div
-                  className="relative"
-                  onMouseEnter={() => setIsDropdownOpen(true)}
-                  onMouseLeave={() => setIsDropdownOpen(false)}
-              >
-                <button
-                    className="flex items-center space-x-1 text-white hover:text-purple-200 transition-colors focus:outline-none py-2"
-                >
-                  <span>Projects</span>
-                  <ChevronDown className={`h-4 w-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {isDropdownOpen && (
-                    <>
-                      <div className="absolute top-full left-0 h-2 w-full" />
-                      <div className="absolute top-[calc(100%+8px)] left-0 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
-                        <NavLink
-                            to="/projects/food-analysis"
-                            className={({ isActive }) =>
-                                `block px-4 py-2 text-gray-800 hover:bg-purple-50 transition-colors ${isActive ? 'bg-purple-100' : ''}`
-                            }
-                            onClick={handleNavClick}
-                        >
-                          Food Analysis
-                        </NavLink>
-                        <NavLink
-                            to="/projects/transportation-analysis"
-                            className={({ isActive }) =>
-                                `block px-4 py-2 text-gray-800 hover:bg-purple-50 transition-colors ${isActive ? 'bg-purple-100' : ''}`
-                            }
-                            onClick={handleNavClick}
-                        >
-                          Transportation Analysis
-                        </NavLink>
-                        <NavLink
-                            to="/projects/community-analysis"
-                            className={({ isActive }) =>
-                                `block px-4 py-2 text-gray-800 hover:bg-purple-50 transition-colors ${isActive ? 'bg-purple-100' : ''}`
-                            }
-                            onClick={handleNavClick}
-                        >
-                          Community Connection Analysis
-                        </NavLink>
-                      </div>
-                    </>
-                )}
-              </div>
+              {/*<div*/}
+              {/*    className="relative"*/}
+              {/*    onMouseEnter={() => setIsDropdownOpen(true)}*/}
+              {/*    onMouseLeave={() => setIsDropdownOpen(false)}*/}
+              {/*>*/}
+              {/*  <button*/}
+              {/*      className="flex items-center space-x-1 text-white hover:text-purple-200 transition-colors focus:outline-none py-2"*/}
+              {/*  >*/}
+              {/*    <span>Projects</span>*/}
+              {/*    <ChevronDown className={`h-4 w-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />*/}
+              {/*  </button>*/}
+              {/*  {isDropdownOpen && (*/}
+              {/*      <>*/}
+              {/*        <div className="absolute top-full left-0 h-2 w-full" />*/}
+              {/*        <div className="absolute top-[calc(100%+8px)] left-0 w-64 bg-white rounded-lg shadow-lg py-2 z-50">*/}
+              {/*          <NavLink*/}
+              {/*              to="/projects/food-analysis"*/}
+              {/*              className={({ isActive }) =>*/}
+              {/*                  `block px-4 py-2 text-gray-800 hover:bg-purple-50 transition-colors ${isActive ? 'bg-purple-100' : ''}`*/}
+              {/*              }*/}
+              {/*              onClick={handleNavClick}*/}
+              {/*          >*/}
+              {/*            Food Analysis*/}
+              {/*          </NavLink>*/}
+              {/*          <NavLink*/}
+              {/*              to="/projects/transportation-analysis"*/}
+              {/*              className={({ isActive }) =>*/}
+              {/*                  `block px-4 py-2 text-gray-800 hover:bg-purple-50 transition-colors ${isActive ? 'bg-purple-100' : ''}`*/}
+              {/*              }*/}
+              {/*              onClick={handleNavClick}*/}
+              {/*          >*/}
+              {/*            Transportation Analysis*/}
+              {/*          </NavLink>*/}
+              {/*          <NavLink*/}
+              {/*              to="/projects/community-analysis"*/}
+              {/*              className={({ isActive }) =>*/}
+              {/*                  `block px-4 py-2 text-gray-800 hover:bg-purple-50 transition-colors ${isActive ? 'bg-purple-100' : ''}`*/}
+              {/*              }*/}
+              {/*              onClick={handleNavClick}*/}
+              {/*          >*/}
+              {/*            Community Connection Analysis*/}
+              {/*          </NavLink>*/}
+              {/*        </div>*/}
+              {/*      </>*/}
+              {/*  )}*/}
+              {/*</div>*/}
               <NavLink
                   to="/events"
                   className={({ isActive }) =>
@@ -139,46 +139,46 @@ export default function Navigation() {
                   >
                     Home
                   </NavLink>
-                  <div>
-                    <button
-                        onClick={() => setIsMobileProjectsOpen(!isMobileProjectsOpen)}
-                        className="flex items-center justify-between w-full text-white py-2 hover:text-purple-200 transition-colors"
-                    >
-                      <span>Projects</span>
-                      <ChevronDown className={`h-4 w-4 transition-transform ${isMobileProjectsOpen ? 'rotate-180' : ''}`} />
-                    </button>
-                    {isMobileProjectsOpen && (
-                        <div className="pl-4 mt-2 space-y-2">
-                          <NavLink
-                              to="/projects/food-analysis"
-                              className={({ isActive }) =>
-                                  `block py-2 text-white hover:text-purple-200 transition-colors ${isActive ? 'text-purple-200 font-semibold' : ''}`
-                              }
-                              onClick={handleNavClick}
-                          >
-                            Food Analysis
-                          </NavLink>
-                          <NavLink
-                              to="/projects/transportation-analysis"
-                              className={({ isActive }) =>
-                                  `block py-2 text-white hover:text-purple-200 transition-colors ${isActive ? 'text-purple-200 font-semibold' : ''}`
-                              }
-                              onClick={handleNavClick}
-                          >
-                            Transportation Analysis
-                          </NavLink>
-                          <NavLink
-                              to="/projects/community-analysis"
-                              className={({ isActive }) =>
-                                  `block py-2 text-white hover:text-purple-200 transition-colors ${isActive ? 'text-purple-200 font-semibold' : ''}`
-                              }
-                              onClick={handleNavClick}
-                          >
-                            Community Connection Analysis
-                          </NavLink>
-                        </div>
-                    )}
-                  </div>
+                  {/*<div>*/}
+                  {/*  <button*/}
+                  {/*      onClick={() => setIsMobileProjectsOpen(!isMobileProjectsOpen)}*/}
+                  {/*      className="flex items-center justify-between w-full text-white py-2 hover:text-purple-200 transition-colors"*/}
+                  {/*  >*/}
+                  {/*    <span>Projects</span>*/}
+                  {/*    <ChevronDown className={`h-4 w-4 transition-transform ${isMobileProjectsOpen ? 'rotate-180' : ''}`} />*/}
+                  {/*  </button>*/}
+                  {/*  {isMobileProjectsOpen && (*/}
+                  {/*      <div className="pl-4 mt-2 space-y-2">*/}
+                  {/*        <NavLink*/}
+                  {/*            to="/projects/food-analysis"*/}
+                  {/*            className={({ isActive }) =>*/}
+                  {/*                `block py-2 text-white hover:text-purple-200 transition-colors ${isActive ? 'text-purple-200 font-semibold' : ''}`*/}
+                  {/*            }*/}
+                  {/*            onClick={handleNavClick}*/}
+                  {/*        >*/}
+                  {/*          Food Analysis*/}
+                  {/*        </NavLink>*/}
+                  {/*        <NavLink*/}
+                  {/*            to="/projects/transportation-analysis"*/}
+                  {/*            className={({ isActive }) =>*/}
+                  {/*                `block py-2 text-white hover:text-purple-200 transition-colors ${isActive ? 'text-purple-200 font-semibold' : ''}`*/}
+                  {/*            }*/}
+                  {/*            onClick={handleNavClick}*/}
+                  {/*        >*/}
+                  {/*          Transportation Analysis*/}
+                  {/*        </NavLink>*/}
+                  {/*        <NavLink*/}
+                  {/*            to="/projects/community-analysis"*/}
+                  {/*            className={({ isActive }) =>*/}
+                  {/*                `block py-2 text-white hover:text-purple-200 transition-colors ${isActive ? 'text-purple-200 font-semibold' : ''}`*/}
+                  {/*            }*/}
+                  {/*            onClick={handleNavClick}*/}
+                  {/*        >*/}
+                  {/*          Community Connection Analysis*/}
+                  {/*        </NavLink>*/}
+                  {/*      </div>*/}
+                  {/*  )}*/}
+                  {/*</div>*/}
                   <NavLink
                       to="/events"
                       className={({ isActive }) =>

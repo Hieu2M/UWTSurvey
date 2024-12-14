@@ -89,20 +89,20 @@ export default function ContactPage() {
                 <div className="container mx-auto px-6">
                     <h1 className="text-5xl font-bold mb-6">Get in Touch</h1>
                     <p className="text-xl max-w-2xl">
-                        If you are having any confusion or question, don't hesitate to get in touch. <br/>Below is the
-                        link to our team's contact method.
+                        If you are having any confusion or question, don't hesitate to get in touch. <br/>Below are the
+                        link to our project manager and our team's contact method.
                     </p>
                 </div>
             </section>
 
-            {/* Contact Information */}
+
             <section className="py-20">
                 <div className="container mx-auto px-6">
                     <div>
-                        <h1 className="text-4xl font-bold mb-6">2024-2025 Cohort Contact</h1>
+                        <h1 className="text-4xl font-bold mb-6">Project Manager - Bára Šafářová, Ph.D.</h1>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {contactInfo.map((info, index) => {
+                        {contactInfo2.map((info, index) => {
                             const Icon = info.icon;
                             return (
                                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
@@ -129,13 +129,14 @@ export default function ContactPage() {
                 </div>
             </section>
 
+            {/* Contact Information */}
             <section className="py-20">
                 <div className="container mx-auto px-6">
                     <div>
-                        <h1 className="text-4xl font-bold mb-6">Project Manager - Bára Šafářová, Ph.D.</h1>
+                        <h1 className="text-4xl font-bold mb-6">2024-2025 Cohort Contact</h1>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {contactInfo2.map((info, index) => {
+                        {contactInfo.map((info, index) => {
                             const Icon = info.icon;
                             return (
                                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
