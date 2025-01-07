@@ -10,57 +10,77 @@ import About from "../components/About.tsx";
 const teamMembers = [
     {
         name: "Hieu Nguyen",
-        role: "Urban Design/GIS Certificate",
+        role: "Urban Design Student/GIS Certificate",
         description: "Advocating for diversity, equity and inclusion",
-        imageUrl: "/images/HieuAnalysis.png"
+        imageUrls: ["/images/HieuAnalysis.png"]
     },
     {
         name: "Raisa Baker",
-        role: "UWT Senior Urban Design",
-        description: "",
-        imageUrl: ""
+        role: "Urban Design Student/Transportation Planning Intern",
+        description: "Designing spaces for people, equity, and sustainability",
+        imageUrls: ["/images/Raisa.png"]
     },
     {
         name: "Sabien Adderley",
         role: "UWT Senior Urban Design",
-        description: "",
-        imageUrl: ""
+        description: "Optimizing traffic, transit, and movements",
+        imageUrls: ["/images/Sabien_P2.png",
+        "/images/Sabien_P3.png",
+        "/images/Sabien_P4.png",
+        "/images/Sabien_P5.png",
+        "/images/Sabien_P6.png",
+        "/images/Sabien_P7.png",
+        "/images/Sabien_P8.png"]
     },
     {
         name: "Yasir Al Sammarraie",
         role: "UWT Senior Urban Design",
-        description: "",
-        imageUrl: ""
+        description: "Promotes the needs for diversity and inclusion, ensuring that future generations recognize and appreciate the rich history",
+        imageUrls: ["/images/Yasir_Page_1.png",
+        "/images/Yasir_Page_2.png",
+        "/images/Yasir_Page_3.png",
+        "/images/Yasir_Page_4.png"]
     },
     {
         name: "Hugo Julian Ennis",
         role: "UWT Senior Urban Design",
         description: "",
-        imageUrl: ""
+        imageUrls: [""]
     },
     {
         name: "Christy Gonzalez",
         role: "UWT Senior Urban Design",
-        description: "",
-        imageUrl: "/images/ChristyAnalysis.jpg"
+        description: "Intersection of equitable design, analysis, and advocacy",
+        imageUrls: ["/images/ChristyAnalysis.jpg"]
     },
     {
         name: "Asad Hussein",
         role: "UWT Senior Urban Design",
-        description: "",
-        imageUrl: ""
+        description: "Creating sustainable and innovative solutions within urban environments and shaping spaces",
+        imageUrls: ["/images/asad.jpeg"]
     },
     {
         name: "Tu T Nguyen",
         role: "UWT Senior Urban Design",
         description: "",
-        imageUrl: ""
+        imageUrls: ["/images/Tu_Page_1.png",
+        "/images/Tu_Page_2.png",
+        "/images/Tu_Page_3.png",
+        "/images/Tu_Page_4.png",
+        "/images/Tu_Page_5.png",
+        "/images/Tu_Page_6.png"]
     },
     {
         name: "Benjamin Smith",
         role: "UWT Senior Urban Design",
-        description: "",
-        imageUrl: ""
+        description: "Highlight the accessibility and distance of food and grocery relative to the UW Tacoma campus",
+        imageUrls: ["/images/Ben_Page_2.png",
+        "/images/Ben_Page_3.png",
+        "/images/Ben_Page_4.png",
+        "/images/Ben_Page_5.png",
+        "/images/Ben_Page_6.png",
+        "/images/Ben_Page_7.png",
+        "/images/Ben_Page_8.png"]
     }
 ];
 
