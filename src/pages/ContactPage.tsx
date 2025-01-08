@@ -5,21 +5,21 @@ const contactInfo = [
     {
         icon: Instagram,
         title: "Instagram",
-        details: "@uwt_urbandesign",
-        link: "https://instagram.com/uwt_urbandesign"
+        details: "@udecapstone",
+        link: "https://instagram.com/udecapstone"
     },
-    {
-        icon: Mail,
-        title: "Email",
-        details: "uwtdesign@uw.edu",
-        link: "mailto:uwtdesign@uw.edu"
-    },
-    {
-        icon: Phone,
-        title: "Phone",
-        details: "(253) 000-000",
-        link: "tel:+12536924000"
-    },
+    // {
+    //     icon: Mail,
+    //     title: "Email",
+    //     details: "uwtdesign@uw.edu",
+    //     link: "mailto:uwtdesign@uw.edu"
+    // },
+    // {
+    //     icon: Phone,
+    //     title: "Phone",
+    //     details: "(253) 000-000",
+    //     link: "tel:+12536924000"
+    // },
     {
         icon: MapPin,
         title: "Location",

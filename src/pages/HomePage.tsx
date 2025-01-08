@@ -44,8 +44,12 @@ const teamMembers = [
     {
         name: "Hugo Julian Ennis",
         role: "UWT Senior Urban Design",
-        description: "",
-        imageUrls: [""]
+        description: "Resources, Clubs, Student movement, and what to do next",
+        imageUrls: ["/images/Hugo_Page_1.png",
+        "/images/Hugo_Page_2.png",
+        "/images/Hugo_Page_3.png",
+        "/images/Hugo_Page_4.png",
+        "/images/Hugo_Page_5.png"]
     },
     {
         name: "Christy Gonzalez",
@@ -57,12 +61,13 @@ const teamMembers = [
         name: "Asad Hussein",
         role: "UWT Senior Urban Design",
         description: "Creating sustainable and innovative solutions within urban environments and shaping spaces",
-        imageUrls: ["/images/asad.jpeg"]
+        imageUrls: ["/images/Asad1_Page_1.png",
+        "/images/Asad1_Page_2.png"]
     },
     {
         name: "Tu T Nguyen",
         role: "UWT Senior Urban Design",
-        description: "",
+        description: "Analyzing tree types and canopy coverage to support urban resilience, equity, and sustainability",
         imageUrls: ["/images/Tu_Page_1.png",
         "/images/Tu_Page_2.png",
         "/images/Tu_Page_3.png",

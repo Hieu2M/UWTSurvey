@@ -2,10 +2,10 @@ import React from 'react';
 import { Github, Twitter, Instagram, Facebook } from 'lucide-react';
 
 const socialLinks = [
-    { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
-    { icon: Github, href: 'https://github.com', label: 'GitHub' }
+    // { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
+    // { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+    { icon: Instagram, href: 'https://instagram.com/udecapstone', label: 'Instagram' },
+    // { icon: Github, href: 'https://github.com', label: 'GitHub' }
 ];
 
 export default function Footer() {
