@@ -31,11 +31,11 @@ const events = [
     // }
 ];
 
-export default function EventsPage() {
+export const EventPreview = () => {
     return (
         <div className="min-h-screen bg-gray-50">
-            {/* Hero Section */}
-            <section className="bg-purple-700 text-white py-20">
+             Hero Section
+            <section className=" text-black py-0">
                 <div className="container mx-auto px-6">
                     <h1 className="text-5xl font-bold mb-6">Upcoming Events</h1>
                     <p className="text-xl max-w-2xl">

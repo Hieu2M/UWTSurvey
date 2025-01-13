@@ -5,6 +5,7 @@ import TeamMember from "../components/TeamMember.tsx";
 import ProjectFeature from "../components/ProjectFeature.tsx";
 import ManifestoSection from "../components/manifesto/ManifestoSection.tsx";
 import About from "../components/About.tsx";
+import {EventPreview} from "../components/EventPreview.tsx";
 
 
 const teamMembers = [
@@ -169,6 +170,8 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
+
+            <EventPreview/>
 
             {/* Feedback Section */}
             <section id="feedback" className="py-20 bg-purple-50">
