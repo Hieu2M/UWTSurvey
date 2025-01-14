@@ -24,7 +24,11 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             <NavLink to="/" className="flex items-center space-x-2" onClick={handleNavClick}>
               <CloudSun className="h-8 w-8 text-white" />
-              <span className="text-white font-bold text-xl">UWT Urban Design 2025 Capstone</span>
+              <span className="text-white font-bold text-xl">UWT Urban Design 2025 Capstone <img
+                  src="/images/studentled.jpeg"
+                  alt="Student Led"
+                  className="inline relative max-w-12 max-h-12 rounded-lg "
+              /></span>
             </NavLink>
 
             {/* Mobile Menu Button */}

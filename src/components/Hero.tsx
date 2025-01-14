@@ -12,15 +12,15 @@ export default function Hero() {
           <img
               src="/images/UWTCrowd.jpg"
               alt="UW Tacoma Campus"
-              className="w-full h-full object-cover"
+              className="absolute w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 backdrop-blur-[1px]"/>
         </div>
 
         {/* Three.js Layer */}
         <div className="absolute inset-0 w-full h-full sm:flex">
           <Canvas
-              camera={{ position: [0, 0, 10], fov: 45 }}
+              camera={{position: [0, 0, 10], fov: 45 }}
               className="w-full h-full"
           >
             <Suspense fallback={null}>
@@ -33,7 +33,11 @@ export default function Hero() {
           <div className="container mx-auto px-6 flex items-center h-[calc(100vh-5rem)]">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-                Reimagining UW Tacoma's Future Together
+                Reimagining UW Tacoma's Future Together <img
+                  src="/images/studentled.jpeg"
+                  alt="Student Led"
+                  className="inline relative w-24 h-24 rounded-lg"
+              />
               </h1>
               <p className="text-xl text-gray-200 mb-8 animate-fade-in-delay">
                 We're a team of senior Urban Design students will collaborate with <b>Civil Engineering 2025 Cohort</b> working to create a new master plan
