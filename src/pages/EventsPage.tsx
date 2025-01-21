@@ -8,8 +8,10 @@ const events = [
         time: "9:00 AM - 1:00 PM",
         location: "UW Tacoma - 1st Floor TPS Building ",
         description: "Share your perspective about food access here on campus!",
-        imageUrl: "./images/FoodFlyer.png",
-        tags: ["Community", "Feedback", "Interactive"]
+        imageUrl: "./images/FoodForThoughtFlyer.png",
+        tags: ["Community", "Feedback", "Interactive"],
+        color: "text-red-700",
+        available: "past"
     },
     {
         title: "Transpo Talk",
@@ -18,17 +20,21 @@ const events = [
         location: "TPS Room 103",
         description: "Share your perspective on transportation, transit, and other movements involved with our campus.",
         imageUrl: "./images/TranspoTalkFlyer.png",
-        tags: ["Community", "Feedback", "Interactive"]
+        tags: ["Community", "Feedback", "Interactive"],
+        color: "text-purple-500",
+        available: "on-going"
     },
-    // {
-    //     title: "Sustainable Campus Exhibition",
-    //     date: "March 5, 2024",
-    //     time: "10:00 AM - 6:00 PM",
-    //     location: "Snoqualmie Building",
-    //     description: "Explore innovative sustainable design solutions proposed for the UWT campus through interactive exhibits.",
-    //     imageUrl: "https://images.unsplash.com/photo-1518281420975-50db6e5d0a97?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    //     tags: ["Exhibition", "Sustainability", "Innovation"]
-    // }
+    {
+        title: "Public Space",
+        date: "January 22, 2025",
+        time: "11:30 AM - 1:30 PM",
+        location: "TPS Lobby",
+        description: "Share your perspective on our campus' food topic .",
+        imageUrl: "./images/PublicSpacesFlyer.png",
+        tags: ["Exhibition", "Sustainability", "Innovation"],
+        color: "text-purple-500",
+        available: "on-going"
+    }
 ];
 
 export default function EventsPage() {
