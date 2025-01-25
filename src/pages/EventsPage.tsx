@@ -21,7 +21,7 @@ const events = [
         description: "Share your perspective on transportation, transit, and other movements involved with our campus.",
         imageUrl: "./images/TranspoTalkFlyer.png",
         tags: ["Community", "Feedback", "Interactive"],
-        color: "text-purple-500",
+        color: "text-red-700",
         available: "on-going"
     },
     {
@@ -32,7 +32,7 @@ const events = [
         description: "Share your perspective on our campus' food topic .",
         imageUrl: "./images/PublicSpacesFlyer.png",
         tags: ["Exhibition", "Sustainability", "Innovation"],
-        color: "text-purple-500",
+        color: "text-red-700",
         available: "on-going"
     }
 ];

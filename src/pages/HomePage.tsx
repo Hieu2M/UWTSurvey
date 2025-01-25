@@ -12,7 +12,7 @@ const teamMembers = [
     {
         name: "Hieu Nguyen",
         role: "Urban Design Student/GIS Certificate",
-        description: "Advocating for diversity, equity and inclusion",
+        description: "Advocating for ADA, diversity, equity and inclusion",
         imageUrls: ["/images/HieuAnalysis.png"]
     },
     {
